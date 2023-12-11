@@ -24,3 +24,28 @@ Make a sample request for input `Change my mind`
 $ python3 make_request.py
 [RESPONSE]  Change your mind. Change your name. Change my mind . Change your life. Change a mind. change your mind, change your life . Change it up. Change the mind. Give you a chance to change your story. Change you mind. Share your story with CNN iReport .
 ```
+
+Package it into the standard distribution format in BentoML using `bentofile.yaml`.
+
+```
+$ bentoml build
+Successfully built Bento(tag="summarization:v4da7feyfwbu2as4").
+```
+
+Containerize bentoml build
+
+```
+$ bentoml containerize summarization:latest
+```
+
+The Docker image’s tag is the same as the Bento tag by default.
+
+```
+$ docker images
+```
+
+Push to Bento cloud
+
+```
+$ bentoml push summarization:latest
+```

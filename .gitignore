@@ -4,4 +4,4 @@
 env/
 venv/
 
-.pyc
+*.pyc
